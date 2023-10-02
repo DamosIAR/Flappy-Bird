@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject Prefab;
+    public float spawnRate = 1f;
+    public float minHeight = -1f;
+    public float maxHeight = 1f;
+
+    private void OnEnable()
     {
-        
+        InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        CancelInvoke(nameof(Spawn));
+    }
+
+    private void Spawn()
+    {
+        GameObject Pipes = Instantiate(Prefab, transform.position, Quaternion.identity);
+        Pipes.transform.position += Vector3.up * Random.Range(minHeight, maxHeight);
     }
 }
