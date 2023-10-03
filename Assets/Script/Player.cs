@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Scoring score;
     private SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
     private int spriteIndex;
@@ -55,7 +56,8 @@ public class Player : MonoBehaviour
             FindAnyObjectByType<GameManager>().GameOver();
         }else if(other.gameObject.tag == "Scoring")
         {
-            FindAnyObjectByType<GameManager>().IncreaseScore();
+            FindAnyObjectByType<Scoring>().UpdateScore();
+            score.AddScore(1);
         }
     }
 }

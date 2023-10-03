@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject replayButton;
     public Player player;
-    public Text scoreText;
     public GameObject playButton;
     public GameObject gameOver;
-    private int score;
 
     public void Play()
     {
-        score = 0;
-        scoreText.text = score.ToString();
-
+        //replayButton.SetActive(false);
         playButton.SetActive(false);
         gameOver.SetActive(false);
 
@@ -41,16 +39,19 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 60;
         Pause();
     }
+
     public void GameOver()
     {
         gameOver.SetActive(true);
+        //replayButton.SetActive(true);
         playButton.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Pause();
     }
 
-    public void IncreaseScore()
+    /*public void IncreaseScore()
     {
         score++;
         scoreText.text = score.ToString();
-    }
+    }*/
 }
