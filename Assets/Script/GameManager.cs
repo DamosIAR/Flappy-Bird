@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour
     public GameObject playButton;
     public GameObject gameOver;
 
+    private void Start()
+    {
+        gameOver.SetActive(false);
+        playButton.SetActive(false);
+    }
+
     public void Play()
     {
         //replayButton.SetActive(false);
@@ -20,7 +26,7 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1f;
         player.enabled = true;
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         /*Pipes[] pipes = FindObjectOfType<Pipes>();
 
         for(int i = 0; i < pipes.Length; i++)
@@ -37,15 +43,15 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Application.targetFrameRate = 60;
-        Pause();
+        //Pause();
     }
 
     public void GameOver()
     {
+        
         gameOver.SetActive(true);
         //replayButton.SetActive(true);
         playButton.SetActive(true);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Pause();
     }
 

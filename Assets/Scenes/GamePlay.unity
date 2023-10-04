@@ -305,8 +305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 6813026352537680375, guid: 9e01eea79017a6a47b35ecab708509d8, type: 3}
-  spawnRate: 1
-  minHeight: -1
+  spawnRate: 2
+  minHeight: -2
   maxHeight: 1
 --- !u!4 &649491554
 Transform:
@@ -715,6 +715,7 @@ GameObject:
   - component: {fileID: 1485086246}
   - component: {fileID: 1485086248}
   - component: {fileID: 1485086247}
+  - component: {fileID: 1485086249}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -839,6 +840,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485086245}
   m_CullTransparentMesh: 1
+--- !u!114 &1485086249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485086245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1708ab4583972294da5eb7d2d1114a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: {fileID: 0}
 --- !u!1 &1557954781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,13 +1093,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473bcad853a6ac64db88f436ca00e90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 0}
+  score: {fileID: 1485086249}
   sprites:
   - {fileID: 21300000, guid: b1d3de3578de34142bced3dca70013cb, type: 3}
   - {fileID: 21300000, guid: 22a739f47b9ddca489f70330dcb29fa0, type: 3}
   - {fileID: 21300000, guid: 8f5996bf7fc9abe418c83fbadf04d97d, type: 3}
-  gravity: -17
-  strength: 5
+  gravity: -20
+  strength: 7
 --- !u!1 &1987621567
 GameObject:
   m_ObjectHideFlags: 0
