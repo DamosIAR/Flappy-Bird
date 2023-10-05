@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    public Scoring score;
     public GameObject Prefab;
-    public float spawnRate = 1f;
+    public float spawnRate;
     public float minHeight = -1f;
     public float maxHeight = 1f;
 
@@ -23,5 +24,10 @@ public class Spawner : MonoBehaviour
     {
         GameObject Pipes = Instantiate(Prefab, transform.position, Quaternion.identity);
         Pipes.transform.position += Vector3.up * Random.Range(minHeight, maxHeight);
+        if( score.Currentscore % 5 == 1)
+        {
+            spawnRate = spawnRate - 0.2f;
+            Debug.Log("kecepatan berkurang");
+        }
     }
 }

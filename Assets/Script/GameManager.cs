@@ -4,13 +4,15 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject replayButton;
+    //public TMP_Text replayButton;
     public Player player;
     public GameObject playButton;
     public GameObject gameOver;
+
 
     private void Start()
     {
@@ -48,7 +50,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        
         gameOver.SetActive(true);
         //replayButton.SetActive(true);
         playButton.SetActive(true);

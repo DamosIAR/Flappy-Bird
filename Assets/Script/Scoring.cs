@@ -2,23 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Scoring : MonoBehaviour
 {
-    public Text Score;
-    private int score = 0;
-
+    public TMP_Text ScoreText;
+    public int Currentscore = 0;
+    public AudioClip clip;
+    public AudioSource source;
     private void Start()
     {
-        score = 0;
+        //score = 0;
     }
 
-    public void AddScore(int newScore)
+    public void AddScore()
     {
-        score += newScore;
+        source.PlayOneShot(clip);
+        Currentscore++;
+        ScoreText.text = Currentscore.ToString();
     }
 
-    public void UpdateScore()
+    /*public void UpdateScore()
     {
         Score.text = "Score = 0" + score;
 
@@ -27,7 +31,7 @@ public class Scoring : MonoBehaviour
     private void Update()
     {
         UpdateScore();
-    }
+    }*/
 
 
 }

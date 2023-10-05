@@ -12,7 +12,11 @@ public class Player : MonoBehaviour
     private Vector3 direction;
     public float gravity = -9.8f;
     public float strength = 5f;
-    
+    public AudioSource hitsource;
+    public AudioClip hitclip;
+    public AudioSource flapsource;
+    public AudioClip flapclip;
+
     private void Awake()
     {   
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -26,6 +30,7 @@ public class Player : MonoBehaviour
     private void Update(){
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(0)){
             direction = Vector3.up * strength;
+            flapsource.PlayOneShot(flapclip);
         }
 
         if(Input.touchCount > 0){
@@ -53,11 +58,12 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.tag == "Obstacle")
         {
+            hitsource.PlayOneShot(hitclip);
             FindAnyObjectByType<GameManager>().GameOver();
         }else if(other.gameObject.tag == "Scoring")
         {
-            FindAnyObjectByType<Scoring>().UpdateScore();
-            score.AddScore(1);
+            //FindAnyObjectByType<Scoring>();
+            score.AddScore();
         }
     }
 }
