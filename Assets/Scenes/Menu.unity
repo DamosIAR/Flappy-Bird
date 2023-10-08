@@ -218,7 +218,7 @@ MonoBehaviour:
           m_StringArgument: GamePlay
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1282367574}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
+  m_IgnoreReversedGraphics: 0
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
@@ -413,10 +413,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 300, y: 800}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -876,6 +876,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8f5996bf7fc9abe418c83fbadf04d97d, type: 3}
   gravity: 0
   strength: 0
+  hitsource: {fileID: 0}
+  hitclip: {fileID: 0}
+  flapsource: {fileID: 0}
+  flapclip: {fileID: 0}
 --- !u!58 &1756737783
 CircleCollider2D:
   m_ObjectHideFlags: 0
