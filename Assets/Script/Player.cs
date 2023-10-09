@@ -62,7 +62,6 @@ public class Player : MonoBehaviour
             FindAnyObjectByType<GameManager>().GameOver();
         }else if(other.gameObject.tag == "Scoring")
         {
-            //FindAnyObjectByType<Scoring>();
             score.AddScore();
         }
     }

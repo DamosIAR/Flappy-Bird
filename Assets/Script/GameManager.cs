@@ -8,9 +8,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    //public TMP_Text replayButton;
-    public Spawner spawner;
-    public Pipes pipes;
     public Player player;
     public GameObject playButton;
     public GameObject gameOver;
@@ -26,7 +23,6 @@ public class GameManager : MonoBehaviour
 
     public void Play()
     {
-        //replayButton.SetActive(false);
         playButton.SetActive(false);
         gameOver.SetActive(false);
         menuButton.SetActive(false);
@@ -34,13 +30,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         player.enabled = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
-        /*Pipes[] pipes = FindObjectOfType<Pipes>();
-
-        for(int i = 0; i < pipes.Length; i++)
-        {
-            Destroy(pipes[i].gameObject);
-        }*/
     }
 
     public void unPause()
@@ -65,16 +54,9 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOver.SetActive(true);
-        //replayButton.SetActive(true);
         playButton.SetActive(true);
         menuButton.SetActive(true);
         Pause();
         
     }
-
-    /*public void IncreaseScore()
-    {
-        score++;
-        scoreText.text = score.ToString();
-    }*/
 }

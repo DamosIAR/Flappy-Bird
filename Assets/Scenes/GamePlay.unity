@@ -149,14 +149,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188535622}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9999992, w: -0.0012718592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1557954785}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180.146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 150, y: 277}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9966302d86e16ba4cb2b797d9fa4b1a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: def7ce495c3138f4b95beb100fef6c79, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -623,8 +623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1262c52f7de0fcb4da2b1043f522af42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 649491553}
-  pipes: {fileID: 6035761824641000028, guid: 9e01eea79017a6a47b35ecab708509d8, type: 3}
   player: {fileID: 1889962418}
   playButton: {fileID: 1372992276}
   gameOver: {fileID: 1285980293}
@@ -947,7 +945,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 97690656
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2

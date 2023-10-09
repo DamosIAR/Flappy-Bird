@@ -10,10 +10,6 @@ public class Scoring : MonoBehaviour
     public int Currentscore = 0;
     public AudioClip clip;
     public AudioSource source;
-    private void Start()
-    {
-        //score = 0;
-    }
 
     public void AddScore()
     {
@@ -21,17 +17,5 @@ public class Scoring : MonoBehaviour
         Currentscore++;
         ScoreText.text = Currentscore.ToString();
     }
-
-    /*public void UpdateScore()
-    {
-        Score.text = "Score = 0" + score;
-
-    }
-
-    private void Update()
-    {
-        UpdateScore();
-    }*/
-
 
 }
